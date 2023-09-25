@@ -5,10 +5,10 @@ import java.awt.event.ActionListener;
 
 public class WorkWindow1 extends JFrame {
     public WorkWindow1() {
-        setTitle("Work1");
+        setTitle("Завдання варіанту 'В0'");
         setSize(400, 140);
-        JButton buttonYes = new JButton("ТАК!");
-        JButton buttonNo = new JButton("НІ!");
+        JButton buttonYes = new JButton("Так!");
+        JButton buttonNo = new JButton("Відміна");
         buttonYes.setPreferredSize(new Dimension(160, 50));
         buttonNo.setPreferredSize(new Dimension(160,50));
         JTextField textField = new JTextField();
@@ -18,6 +18,12 @@ public class WorkWindow1 extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Main.mainWindow.setTextLabel(textField.getText());
+            }
+        });
+        buttonNo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
             }
         });
         panel.add(textField);

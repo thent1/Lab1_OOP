@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -9,15 +10,13 @@ public class MainWindow extends JFrame {
         setTitle("Lab. 1");
         setSize(500, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JPanel panel = new JPanel();
-        textFieldLabel = new JLabel("Your text will be there");
-        scrollBarLabel = new JLabel("Your number will be there");
-
-
+        JPanel panel = new JPanel(new FlowLayout());
+        textFieldLabel = new JLabel("Тут буде текст");
+        scrollBarLabel = new JLabel("Тут буде число");
         JMenuBar menuBar = new JMenuBar();
-        JMenu menu = new JMenu("Work");
-        JMenuItem menuWork1 = new JMenuItem("Work1");
-        JMenuItem menuWork2 = new JMenuItem("Work2");
+        JMenu menu = new JMenu("Робота");
+        JMenuItem menuWork1 = new JMenuItem("Робота 1");
+        JMenuItem menuWork2 = new JMenuItem("Робота 2");
 
 
         menuWork1.addActionListener(new ActionListener() {
